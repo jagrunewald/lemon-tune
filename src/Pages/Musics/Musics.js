@@ -19,6 +19,8 @@ export default function Musics () {
       <div className='musics-page'>
         <div className='musics-search'>
           <h2 className='musics-name'>{ getUser() }</h2>
+          <a href='' className='musics-favorites'>Favorites</a>
+          <a href='' className='musics-logoff'>Logoff</a>
         </div>
         <div className='musics-all'>Teste</div>
       </div>

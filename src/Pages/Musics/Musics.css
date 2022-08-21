@@ -24,5 +24,30 @@
 .musics-name {
   text-align: center;
   margin-top: 100px;
+  height: 8%;
   color: rgb(247, 247, 247);
+  border-bottom: solid 10px rgb(247, 247, 247);
+  /* border: solid red; */
+}
+
+.musics-favorites {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: rgb(247, 247, 247);
+  height: 30%;
+  font-size: 20px;
+  margin-top: 40px;
+  /* border: solid red; */
+}
+
+.musics-logoff {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  align-items: flex-end;
+  color: rgb(247, 247, 247);
+  font-size: 20px;
+  height: 40%;
+  /* border: solid red; */
 }
