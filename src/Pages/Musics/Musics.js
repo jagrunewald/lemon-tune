@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 import './Musics.css';
+import searchAlbumsAPI from '../../services/searchMusicAPI';
 import Header from '../../Components/Header/Header';
 
 export default function Musics () {
   const [search, setSearch] = useState('');
+  const [musicList, setMusicList] = useState(null);
 
   function handleChange({ target }) {
     setSearch(target.value);
   }
 
-  function handleClick () {
-    console.log('clicado');
-  }
+  async function handleClick () {
+    const results = await searchAlbumsAPI(search);
+    setMusicList(results);
+  };
 
   function getUser () {
     var nameUser = JSON.parse(localStorage.getItem('name'));
