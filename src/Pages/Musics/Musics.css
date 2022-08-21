@@ -1,6 +1,7 @@
 .musics {
   width: 100%;
   height: 100vh;
+  font-family: Roboto, sans-serif;
 }
 
 .musics-page {
@@ -10,12 +11,47 @@
 }
 
 .musics-all {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 88%;
   height: 100vh;
   background-color: rgb(247, 247, 247);
 }
 
-.musics-search {
+.input-search {
+  margin-top: 100px;
+  height: 30px;
+  width: 50%;
+  border-radius: 5%;
+  border: solid 2px rgb(255, 201, 6);
+  font-size: 20px;
+}
+.input-search:focus {
+  border: solid 3px rgb(255, 201, 6);
+  outline: none;
+}
+
+.button-search {
+  margin-top: 100px;
+  margin-left: 10px;
+  height: 37px;
+  width: 100px;
+  border-radius: 5%;
+  border: none;
+  background-color: rgb(255, 201, 6);
+  color: rgb(247, 247, 247);
+  font-size: 20px;
+}
+
+.musics-all-response {
+  /* border: solid red; */
+  width: 100%;
+  height: 80%;
+  margin-top: 40px;
+}
+
+.musics-nav {
   width: 12%;
   height: 100vh;
   background-color: rgb(255, 201, 6);
@@ -26,7 +62,7 @@
   margin-top: 100px;
   height: 8%;
   color: rgb(247, 247, 247);
-  border-bottom: solid 10px rgb(247, 247, 247);
+  border-bottom: solid 6px rgb(247, 247, 247);
   /* border: solid red; */
 }
 
