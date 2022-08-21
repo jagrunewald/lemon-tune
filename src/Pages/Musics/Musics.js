@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import './Musics.css';
 import searchAlbumsAPI from '../../services/searchMusicAPI';
+import getMusics from '../../services/musicsAPI';
 import Header from '../../Components/Header/Header';
 
 export default function Musics () {
   const [search, setSearch] = useState('');
-  const [musicList, setMusicList] = useState(null);
+  const [albumList, setAlbumList] = useState(null);
 
   function handleChange({ target }) {
     setSearch(target.value);
@@ -13,8 +14,16 @@ export default function Musics () {
 
   async function handleClick () {
     const results = await searchAlbumsAPI(search);
-    setMusicList(results);
+    setAlbumList(results);
   };
+
+  // function getReturn () {
+  //   if (search === '') {
+  //     return '';
+  //   } else if (albumList.lenght === 0) {
+  //     return 'Não encontrado';
+  //   }
+  // }
 
   function getUser () {
     var nameUser = JSON.parse(localStorage.getItem('name'));
@@ -38,7 +47,22 @@ export default function Musics () {
         <div className='musics-all'>
           <input type='text' className='input-search' value={search} onChange={ handleChange }></input>
           <button type='button' className='button-search' onClick={ handleClick }>Search</button>
-          <div className='musics-all-response'></div>
+          <div className='musics-all-response'>
+            {
+              albumList ?
+              albumList.map((album) => {
+                console.log(album.collectionName);
+                return (
+                  <div className='album-list'>
+                  <p>{album.artistName}</p>
+                  <img src={album.artworkUrl100} alt='' />
+                  <p>{album.collectionName}</p>
+                </div>
+                )
+              })
+              : ''
+            }
+          </div>
         </div>
       </div>
 
