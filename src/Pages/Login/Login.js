@@ -41,7 +41,7 @@ export default function Login () {
   function handleClick() {
     localStorage.setItem('user', JSON.stringify(email));
     localStorage.setItem('name', JSON.stringify(name));
-    navigate('/musics');
+    navigate('/albums');
   }
 
   return (

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Musics.css';
+import './Albums.css';
 import searchAlbumsAPI from '../../services/searchMusicAPI';
 import getMusics from '../../services/musicsAPI';
 import Header from '../../Components/Header/Header';
@@ -7,6 +7,7 @@ import Header from '../../Components/Header/Header';
 export default function Musics () {
   const [search, setSearch] = useState('');
   const [albumList, setAlbumList] = useState(null);
+  const [musics, setMusics] = useState(null);
 
   function handleChange({ target }) {
     setSearch(target.value);
@@ -16,14 +17,6 @@ export default function Musics () {
     const results = await searchAlbumsAPI(search);
     setAlbumList(results);
   };
-
-  // function getReturn () {
-  //   if (search === '') {
-  //     return '';
-  //   } else if (albumList.lenght === 0) {
-  //     return 'Não encontrado';
-  //   }
-  // }
 
   function getUser () {
     var nameUser = JSON.parse(localStorage.getItem('name'));
@@ -36,28 +29,29 @@ export default function Musics () {
   }
 
   return (
-    <div className='musics'>
+    <div className='albums'>
       <Header />
-      <div className='musics-page'>
-        <div className='musics-nav'>
-          <h2 className='musics-name'>{ getUser() }</h2>
-          <a href='' className='musics-favorites'>Favorites</a>
-          <a href='' className='musics-logoff'>Logoff</a>
+      <div className='albums-page'>
+        <div className='albums-nav'>
+          <h2 className='albums-name'>{ getUser() }</h2>
+          <a href='' className='albums-favorites'>Favorites</a>
+          <a href='' className='albums-logoff'>Logoff</a>
         </div>
-        <div className='musics-all'>
+        <div className='albums-all'>
           <input type='text' className='input-search' value={search} onChange={ handleChange }></input>
           <button type='button' className='button-search' onClick={ handleClick }>Search</button>
-          <div className='musics-all-response'>
+          <div className='albums-all-response'>
             {
               albumList ?
               albumList.map((album) => {
-                console.log(album.collectionName);
                 return (
-                  <div className='album-list'>
-                  <p>{album.artistName}</p>
-                  <img src={album.artworkUrl100} alt='' />
-                  <p>{album.collectionName}</p>
-                </div>
+                  <button type='button' className='albums-list'>
+                    <div>
+                      <p>{album.artistName}</p>
+                      <img src={album.artworkUrl100} alt='' />
+                      <p>{album.collectionName}</p>
+                    </div>
+                  </button>
                 )
               })
               : ''

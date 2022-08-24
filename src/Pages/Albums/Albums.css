@@ -1,16 +1,16 @@
-.musics {
+.albums {
   width: 100%;
   height: 100vh;
   font-family: Roboto, sans-serif;
 }
 
-.musics-page {
+.albums-page {
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
-.musics-all {
+.albums-all {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -44,7 +44,7 @@
   font-size: 20px;
 }
 
-.musics-all-response {
+.albums-all-response {
   /* border: solid red; */
   display: flex;
   flex-wrap: wrap;
@@ -54,7 +54,7 @@
   margin-top: 40px;
 }
 
-.album-list {
+.albums-list {
   width: 200px;
   height: 230px;
   margin-bottom: 15px;
@@ -65,13 +65,13 @@
   background-color: white;
 }
 
-.musics-nav {
+.albums-nav {
   width: 12%;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: rgb(255, 201, 6);
 }
 
-.musics-name {
+.albums-name {
   text-align: center;
   margin-top: 100px;
   height: 8%;
@@ -80,7 +80,7 @@
   /* border: solid red; */
 }
 
-.musics-favorites {
+.albums-favorites {
   display: flex;
   justify-content: center;
   text-decoration: none;
@@ -91,7 +91,7 @@
   /* border: solid red; */
 }
 
-.musics-logoff {
+.albums-logoff {
   display: flex;
   justify-content: center;
   text-decoration: none;
