@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Albums.css';
 import searchAlbumsAPI from '../../services/searchMusicAPI';
-import getMusics from '../../services/musicsAPI';
 import Header from '../../Components/Header/Header';
 
 export default function Musics () {
+  const navigate = useNavigate();
   const [search, setSearch] = useState('');
   const [albumList, setAlbumList] = useState(null);
-  const [musics, setMusics] = useState(null);
 
   function handleChange({ target }) {
     setSearch(target.value);
@@ -17,6 +17,10 @@ export default function Musics () {
     const results = await searchAlbumsAPI(search);
     setAlbumList(results);
   };
+
+  function albumMusics (album) {
+    navigate('/musics', { state: album.collectionId })
+  }
 
   function getUser () {
     var nameUser = JSON.parse(localStorage.getItem('name'));
@@ -45,7 +49,7 @@ export default function Musics () {
               albumList ?
               albumList.map((album) => {
                 return (
-                  <button type='button' className='albums-list'>
+                  <button type='button' key={album.collectionId} className='albums-list' onClick={ () => albumMusics(album) }>
                     <div>
                       <p>{album.artistName}</p>
                       <img src={album.artworkUrl100} alt='' />
