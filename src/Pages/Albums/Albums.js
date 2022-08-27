@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Albums.css';
 import searchAlbumsAPI from '../../services/searchMusicAPI';
 import Header from '../../Components/Header/Header';
+import Nav from '../../Components/Nav/Nav';
 
 export default function Musics () {
   const navigate = useNavigate();
@@ -22,25 +23,11 @@ export default function Musics () {
     navigate('/musics', { state: album })
   }
 
-  function getUser () {
-    var nameUser = JSON.parse(localStorage.getItem('name'));
-
-    if(nameUser) {
-      return nameUser;
-    } else {
-      return '';
-    }
-  }
-
   return (
     <div className='albums'>
       <Header />
+      <Nav />
       <div className='albums-page'>
-        <div className='albums-nav'>
-          <h2 className='albums-name'>{ getUser() }</h2>
-          <a href='' className='albums-favorites'>Favorites</a>
-          <a href='' className='albums-logoff'>Logoff</a>
-        </div>
         <div className='albums-all'>
           <input type='text' className='input-search' value={search} onChange={ handleChange }></input>
           <button type='button' className='button-search' onClick={ handleClick }>Search</button>

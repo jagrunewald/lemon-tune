@@ -3,6 +3,7 @@ import './Musics.css';
 import { useLocation } from 'react-router-dom';
 import getMusics from '../../services/musicsAPI';
 import Header from '../../Components/Header/Header';
+import Nav from '../../Components/Nav/Nav';
 
 export default function Musics () {
   const location = useLocation();
@@ -20,6 +21,7 @@ export default function Musics () {
   return (
     <div className='musics'>
       <Header />
+      <Nav />
       <div className='musics-info'>
         <h1>{location.state.artistName}</h1>
         <img src={location.state.artworkUrl100} alt='' />
