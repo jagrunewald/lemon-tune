@@ -2,16 +2,26 @@
   font-family: Roboto, sans-serif;
 }
 
+.musics-page {
+  display: flex;
+  /* border: solid red; */
+}
+
+.musics-container {
+  margin-top: 120px;
+  width: 100%;
+  /* border: solid red; */
+}
+
 .musics-info {
   text-align: center;
-  padding-top: 60px;
   margin-bottom: 40px;
   /* border: solid red; */
 }
 
 .musics-all {
   margin: auto;
-  width: 50%;
+  width: 60%;
   /* border: solid blue; */
 }
 

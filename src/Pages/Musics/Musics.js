@@ -22,25 +22,29 @@ export default function Musics () {
     <div className='musics'>
       <Header />
       <Nav />
-      <div className='musics-info'>
-        <h1>{location.state.artistName}</h1>
-        <img src={location.state.artworkUrl100} alt='' />
-        <p>{location.state.collectionName}</p>
-      </div>
-      <div className='musics-all'>
-        {
-          musics ?
-          musics.map((music, index) => {
-            return (
-              <div key={index} className='musics-list'>
-                <p>{music.trackName}</p>
-                <audio src={music.previewUrl} preload="auto" controls />
-                <input type='checkbox' id='favourites'/>
-              </div>
-            )
-          })
-          : ''
-        }
+      <div className='musics-page'>
+        <div className='musics-container'>
+          <div className='musics-info'>
+            <h1>{location.state.artistName}</h1>
+            <img src={location.state.artworkUrl100} alt='' />
+            <p>{location.state.collectionName}</p>
+          </div>
+          <div className='musics-all'>
+          {
+            musics ?
+            musics.map((music, index) => {
+              return (
+                <div key={index} className='musics-list'>
+                  <p>{music.trackName}</p>
+                  <audio src={music.previewUrl} preload="auto" controls />
+                  <input type='checkbox' id='favourites'/>
+                </div>
+              )
+            })
+            : ''
+          }
+          </div>
+        </div>
       </div>
     </div>
   )
