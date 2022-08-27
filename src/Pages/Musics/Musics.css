@@ -1,0 +1,38 @@
+.musics {
+  font-family: Roboto, sans-serif;
+}
+
+.musics-info {
+  text-align: center;
+  padding-top: 60px;
+  margin-bottom: 40px;
+  /* border: solid red; */
+}
+
+.musics-all {
+  margin: auto;
+  width: 50%;
+  /* border: solid blue; */
+}
+
+.musics-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  /* border: solid red; */
+}
+
+.musics-list p {
+  width: 50%;
+  margin-left: 25px;
+  /* border: solid red; */
+}
+
+.musics-list audio {
+  width: 30%;
+  /* border: solid red; */
+}
+
+.musics-list input {
+  margin-right: 25px;
+}

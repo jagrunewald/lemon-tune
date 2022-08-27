@@ -19,7 +19,7 @@ export default function Musics () {
   };
 
   function albumMusics (album) {
-    navigate('/musics', { state: album.collectionId })
+    navigate('/musics', { state: album })
   }
 
   function getUser () {
