@@ -8,6 +8,10 @@ import Nav from '../../Components/Nav/Nav';
 export default function Musics () {
   const location = useLocation();
   const [musics, setMusics] = useState();
+  // const [checked, setChecked] = useState(false);
+  const [favorites, setFavorites] = useState([]);
+
+  // console.log(favorites);
 
   useEffect(() => {
     async function fetchID() {
@@ -18,6 +22,16 @@ export default function Musics () {
     fetchID();
   });
 
+  function handleChange({ target }) {
+    if(target.checked === true) {
+      setFavorites([ ...favorites, target.value ]);
+    }
+    if(target.checked === false) {
+      const newFavorites = favorites.filter(favorite => favorite !== target.value);
+      setFavorites(newFavorites);
+    }  
+  }
+
   return (
     <div className='musics'>
       <Header />
@@ -27,7 +41,7 @@ export default function Musics () {
           <div className='musics-info'>
             <h1>{location.state.artistName}</h1>
             <img src={location.state.artworkUrl100} alt='' />
-            <p>{location.state.collectionName}</p>
+            <h2>{location.state.collectionName}</h2>
           </div>
           <div className='musics-all'>
           {
@@ -37,7 +51,7 @@ export default function Musics () {
                 <div key={index} className='musics-list'>
                   <p>{music.trackName}</p>
                   <audio src={music.previewUrl} preload="auto" controls />
-                  <input type='checkbox' id='favourites'/>
+                  <input type='checkbox' value={music.trackId} onChange={ handleChange } />
                 </div>
               )
             })

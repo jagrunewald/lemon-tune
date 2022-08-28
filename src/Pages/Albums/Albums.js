@@ -39,7 +39,7 @@ export default function Musics () {
                   <button type='button' key={album.collectionId} className='albums-list' onClick={ () => albumMusics(album) }>
                     <div>
                       <p>{album.artistName}</p>
-                      <img src={album.artworkUrl100} alt='' />
+                      <img src={album.artworkUrl100} alt='' className='img'/>
                       <p>{album.collectionName}</p>
                     </div>
                   </button>
