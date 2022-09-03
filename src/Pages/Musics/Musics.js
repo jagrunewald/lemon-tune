@@ -9,7 +9,7 @@ export default function Musics () {
   const location = useLocation();
   const favoritesLocalStorage = JSON.parse(localStorage.getItem('isFavorite'));
   const [musics, setMusics] = useState();
-  const [favorites, setFavorites] = useState(favoritesLocalStorage !== null ? favoritesLocalStorage : [] );
+  let allFavorites = favoritesLocalStorage !== null ? favoritesLocalStorage : [];
 
   useEffect(() => {
     async function fetchID() {
@@ -20,24 +20,19 @@ export default function Musics () {
     fetchID();
   });
 
-  // const saveFavorites = () => {
-  //   localStorage.setItem('isFavorite', JSON.stringify(favorites));
-  // }
-
   function handleChange({ target }, music) {
     if(target.checked === true) {
-      setFavorites([ ...favorites, {
+      allFavorites = [ ...allFavorites, {
         id: music.trackId,
         artist: music.artistName,
         name: music.trackName,
         album: music.collectionName,
         preview: music.previewUrl,
-      } ]);
-      localStorage.setItem('isFavorite', JSON.stringify(favorites));
+      }]
+      localStorage.setItem('isFavorite', JSON.stringify(allFavorites));
     }
     if(target.checked === false) {
-      const newFavorites = favorites.filter(favorite => favorite.id !== music.trackId);
-      setFavorites(newFavorites);
+      const newFavorites = allFavorites.filter(favorite => favorite.id !== music.trackId);
       localStorage.setItem('isFavorite', JSON.stringify(newFavorites));
     }
   }
@@ -45,7 +40,7 @@ export default function Musics () {
   return (
     <div className='musics'>
       <Header />
-      <Nav listfavorites={favorites} />
+      <Nav listfavorites={allFavorites} />
       <div className='musics-page'>
         <div className='musics-container'>
           <div className='musics-info'>
