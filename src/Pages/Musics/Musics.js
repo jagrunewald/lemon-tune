@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import './Musics.css';
 import { useLocation } from 'react-router-dom';
+import './Musics.css';
 import getMusics from '../../services/musicsAPI';
 import Header from '../../Components/Header/Header';
 import Nav from '../../Components/Nav/Nav';
 
 export default function Musics () {
   const location = useLocation();
+  const favoritesLocalStorage = JSON.parse(localStorage.getItem('isFavorite'));
   const [musics, setMusics] = useState();
-  // const [checked, setChecked] = useState(false);
-  const [favorites, setFavorites] = useState([]);
-
-  // console.log(favorites);
+  const [favorites, setFavorites] = useState(favoritesLocalStorage !== null ? favoritesLocalStorage : [] );
 
   useEffect(() => {
     async function fetchID() {
@@ -22,20 +20,32 @@ export default function Musics () {
     fetchID();
   });
 
-  function handleChange({ target }) {
+  // const saveFavorites = () => {
+  //   localStorage.setItem('isFavorite', JSON.stringify(favorites));
+  // }
+
+  function handleChange({ target }, music) {
     if(target.checked === true) {
-      setFavorites([ ...favorites, target.value ]);
+      setFavorites([ ...favorites, {
+        id: music.trackId,
+        artist: music.artistName,
+        name: music.trackName,
+        album: music.collectionName,
+        preview: music.previewUrl,
+      } ]);
+      localStorage.setItem('isFavorite', JSON.stringify(favorites));
     }
     if(target.checked === false) {
-      const newFavorites = favorites.filter(favorite => favorite !== target.value);
+      const newFavorites = favorites.filter(favorite => favorite.id !== music.trackId);
       setFavorites(newFavorites);
-    }  
+      localStorage.setItem('isFavorite', JSON.stringify(newFavorites));
+    }
   }
 
   return (
     <div className='musics'>
       <Header />
-      <Nav />
+      <Nav listfavorites={favorites} />
       <div className='musics-page'>
         <div className='musics-container'>
           <div className='musics-info'>
@@ -51,7 +61,7 @@ export default function Musics () {
                 <div key={index} className='musics-list'>
                   <p>{music.trackName}</p>
                   <audio src={music.previewUrl} preload="auto" controls />
-                  <input type='checkbox' value={music.trackId} onChange={ handleChange } />
+                  <input type='checkbox' value={music} onChange={ (e) => handleChange(e, music) } />
                 </div>
               )
             })

@@ -1,0 +1,28 @@
+.favorites {
+  display: flex;
+  background-color: rgb(247, 247, 247);
+  font-family: Roboto, sans-serif;
+}
+
+.favorites-all {
+  margin: auto;
+  margin-top: 200px;
+  margin-bottom: 100px;
+  padding: 15px 15px 15px 15px;
+  align-items: center;
+  color: rgb(44, 43, 43);
+  width: 80%;
+  height: 100%;
+}
+
+.favorites-list {
+  display: flex;
+  border-radius: 1%;
+  padding: 10px;
+  background-color: rgb(247, 230, 169);
+  justify-content: space-between;
+}
+
+.favorites-list p {
+  width: 50%;
+}
