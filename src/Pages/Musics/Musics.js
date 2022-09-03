@@ -10,6 +10,7 @@ export default function Musics () {
   const favoritesLocalStorage = JSON.parse(localStorage.getItem('isFavorite'));
   const [musics, setMusics] = useState();
   let allFavorites = favoritesLocalStorage !== null ? favoritesLocalStorage : [];
+  console.log('location',location.state.collectionId);
 
   useEffect(() => {
     async function fetchID() {

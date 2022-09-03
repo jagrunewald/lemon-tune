@@ -26,3 +26,18 @@
 .favorites-list p {
   width: 50%;
 }
+
+@media screen and (max-width: 600px) {
+  .favorites-list {
+    font-size: 15px;
+  }
+  .favorites-list audio {
+    height: 50px;
+    width: 50%;
+  }
+
+  .favorites-all {
+    margin-top: 150px;
+    width: 95%;
+  }
+}
