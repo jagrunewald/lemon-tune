@@ -5,7 +5,9 @@ import './Nav.css';
 export default function Nav (listfavorites) {
   const navigate = useNavigate();
 
-  // console.log('lista de favoritos', listfavorites);
+  function onSearch () {
+    navigate('/albums');
+  }
 
   function onClick () {
     navigate('/favorites', { state: listfavorites });
@@ -29,7 +31,7 @@ export default function Nav (listfavorites) {
   return (
     <div className='nav'>
       <h2 className='nav-name'>{ getUser() }</h2>
-      <a href='/albums' className='nav-search'>Search</a>
+      <button type='button' className='nav-search' onClick={ onSearch }>Search</button>
       <button type='button' className='nav-favorites' onClick={ onClick }>Favorites</button>
       <button type='button' className='nav-logoff' onClick={ onLogoff }>Logoff</button>
     </div>

@@ -6,19 +6,16 @@
 
 .musics-page {
   display: flex;
-  /* border: solid red; */
 }
 
 .musics-container {
   margin-top: 120px;
   width: 100%;
-  /* border: solid red; */
 }
 
 .musics-info {
   text-align: center;
   margin-bottom: 50px;
-  /* border: solid red; */
 }
 .musics-info img {
   border-radius: 4%;
@@ -28,25 +25,21 @@
   margin: auto;
   width: 60%;
   color: rgb(44, 43, 43);
-  /* border: solid blue; */
 }
 
 .musics-list {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-  /* border: solid red; */
 }
 
 .musics-list p {
   width: 50%;
   margin-left: 25px;
-  /* border: solid red; */
 }
 
 .musics-list audio {
   width: 30%;
-  /* border: solid red; */
 }
 
 .musics-list input {

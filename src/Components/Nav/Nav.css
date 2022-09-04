@@ -29,7 +29,6 @@
   height: 30px;
   margin-top: 0px;
   color: rgb(247, 247, 247);
-  /* border: solid red; */
 }
 
 .nav-search {
@@ -39,7 +38,8 @@
   width: 10%;
   height: 30px;
   font-size: 20px;
-  /* border: solid red; */
+  border: none;
+  background-color: rgb(255, 201, 6);
 }
 .nav-search:hover {
   font-weight: bolder;
@@ -54,7 +54,6 @@
   font-size: 20px;
   border: none;
   background-color: rgb(255, 201, 6);
-  /* border: solid red; */
 }
 .nav-favorites:hover {
   cursor: pointer;
@@ -71,7 +70,6 @@
   text-align: right;
   border: none;
   background-color: rgb(255, 201, 6);
-  /* border: solid red; */
 }
 .nav-logoff:hover {
   cursor: pointer;
