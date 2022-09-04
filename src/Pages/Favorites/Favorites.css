@@ -9,6 +9,7 @@
   margin-top: 200px;
   margin-bottom: 100px;
   padding: 15px 15px 15px 15px;
+  background-color: rgb(247, 230, 169);
   align-items: center;
   color: rgb(44, 43, 43);
   width: 80%;
@@ -21,10 +22,14 @@
   padding: 10px;
   background-color: rgb(247, 230, 169);
   justify-content: space-between;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .favorites-list p {
-  width: 50%;
+  width: 40%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media screen and (max-width: 600px) {
