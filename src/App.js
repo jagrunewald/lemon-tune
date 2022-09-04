@@ -8,12 +8,13 @@ import Favorites from '../src/Pages/Favorites/Favorites';
 function App() {
   return (
     <div>
-      <Routes>
+      <h1>Test deploy</h1>
+      {/* <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/albums" element={<Albums />} />
         <Route path="/musics" element={<Musics />} />
         <Route path="/favorites" element={<Favorites />} />
-      </Routes>
+      </Routes> */}
     </div>
   );
 }
