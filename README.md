@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+## :lemon: Lemon Tune :musical_score:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Deploy
 
-## Available Scripts
+click here: https://jagrunewald.github.io/lemon-tune/#/
 
-In the project directory, you can run:
+### Projeto
 
-### `npm start`
+#### Front-End | Este projeto tem como objetivo criar uma aplicação capaz de pesquisar e reproduzir músicas das mais variadas bandas e artistas. A pessoa usuária poderá fazer o login com seu email e adicionar uma imagem de perfil. Após o login será possível realizar pesquisas de bandas e artistas, buscando diversos albuns referente ao artista pesquisado, sendo possível reproduzir as músicas do album, também criar uma lista de músicas favoritas e editar o perfil do usuário.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Demonstração
+gif de apresentação
+Habilidades
+Neste projeto, foram utilizadas as seguintes habilidades:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Fazer requisições e consumir dados vindos de uma API;
 
-### `npm test`
+Utilizar os ciclos de vida de um componente React;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Utilizar a função setState de forma a garantir que um determinado código só é executado após o estado ser atualizado
 
-### `npm run build`
+Utilizar o componente BrowserRouter corretamente;
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Criar rotas, mapeando o caminho da URL com o componente correspondente, via Route;
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Utilizar o Switch do React Router
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Usar o componente Redirect pra redirecionar para uma rota específica;
 
-### `npm run eject`
+Criar links de navegação na aplicação com o componente Link;
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Tela de pesquisa
+App Screenshot
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Rodando o projeto localmente
+Clone o projeto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  git clone git@github.com:Mathluiz23/Tunes.git
+Entre no diretório do projeto
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  cd Tunes
+Instale as dependências
 
-## Learn More
+  npm install
+Inicie o projeto
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  npm start
