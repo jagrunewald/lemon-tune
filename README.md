@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+## :lemon: Lemon Tune :musical_score:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Deploy
 
-## Available Scripts
+click here: https://jagrunewald.github.io/lemon-tune/#/
 
-In the project directory, you can run:
+### Projeto
 
-### `npm start`
+Front-End | Este projeto trata-se de uma aplicação capaz de pesquisar e reproduzir músicas de diversas bandas e artistas. A pessoa usuária poderá fazer o login com seu username, email e senha. Após o login será possível realizar pesquisas de bandas e artistas, buscando diversos albuns referente ao artista pesquisado, sendo possível reproduzir trechos das músicas do album selecionado. Também é possível criar uma lista de músicas favoritas.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Neste projeto, foram utilizadas as seguintes habilidades:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+-Requisições e consumir dados vindos de uma API;
 
-### `npm test`
+-Utilização dos ciclos de vida de um componente React;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-Utilização de Hooks para gerenciamento de estados;
 
-### `npm run build`
+-Criação de rotas, mapeamento de caminho da URL com o componente correspondente, via Route;
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Rodando o projeto localmente
 
-### `npm run eject`
+Clone o projeto
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+  git@github.com:jagrunewald/lemon-tune.git
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Entre no diretório do projeto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+  cd lemon-tune
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Instale as dependências
 
-## Learn More
+```bash
+  npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Inicie o projeto
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+  npm start
+```
