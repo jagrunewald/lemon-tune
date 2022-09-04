@@ -6,42 +6,42 @@ click here: https://jagrunewald.github.io/lemon-tune/#/
 
 ### Projeto
 
-#### Front-End | Este projeto tem como objetivo criar uma aplicação capaz de pesquisar e reproduzir músicas das mais variadas bandas e artistas. A pessoa usuária poderá fazer o login com seu email e adicionar uma imagem de perfil. Após o login será possível realizar pesquisas de bandas e artistas, buscando diversos albuns referente ao artista pesquisado, sendo possível reproduzir as músicas do album, também criar uma lista de músicas favoritas e editar o perfil do usuário.
+Front-End | Este projeto trata-se de uma aplicação capaz de pesquisar e reproduzir músicas de diversas bandas e artistas. A pessoa usuária poderá fazer o login com seu username, email e senha. Após o login será possível realizar pesquisas de bandas e artistas, buscando diversos albuns referente ao artista pesquisado, sendo possível reproduzir trechos das músicas do album selecionado. Também é possível criar uma lista de músicas favoritas.
 
-Demonstração
-gif de apresentação
-Habilidades
-Neste projeto, foram utilizadas as seguintes habilidades:
+#### Neste projeto, foram utilizadas as seguintes habilidades:
 
-Fazer requisições e consumir dados vindos de uma API;
+-Requisições e consumir dados vindos de uma API;
 
-Utilizar os ciclos de vida de um componente React;
+-Utilização dos ciclos de vida de um componente React;
 
-Utilizar a função setState de forma a garantir que um determinado código só é executado após o estado ser atualizado
+-Utilização de Hooks para gerenciamento de estados;
 
-Utilizar o componente BrowserRouter corretamente;
+-Criação de rotas, mapeamento de caminho da URL com o componente correspondente, via Route;
 
-Criar rotas, mapeando o caminho da URL com o componente correspondente, via Route;
 
-Utilizar o Switch do React Router
 
-Usar o componente Redirect pra redirecionar para uma rota específica;
+### Rodando o projeto localmente
 
-Criar links de navegação na aplicação com o componente Link;
-
-Tela de pesquisa
-App Screenshot
-
-Rodando o projeto localmente
 Clone o projeto
 
-  git clone git@github.com:Mathluiz23/Tunes.git
+```bash
+  git@github.com:jagrunewald/lemon-tune.git
+```
+
 Entre no diretório do projeto
 
-  cd Tunes
+```bash
+  cd lemon-tune
+```
+
 Instale as dependências
 
+```bash
   npm install
+```
+
 Inicie o projeto
 
+```bash
   npm start
+```
