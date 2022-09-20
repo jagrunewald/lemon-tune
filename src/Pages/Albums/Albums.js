@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Albums.css';
 import searchAlbumsAPI from '../../services/searchMusicAPI';
@@ -9,6 +9,25 @@ export default function Musics () {
   const navigate = useNavigate();
   const [search, setSearch] = useState('');
   const [albumList, setAlbumList] = useState(null);
+  const [lengthAlbumList, setLengthAlbumList] = useState(-2);
+  console.log(lengthAlbumList);
+
+  function checkAlbum(results) {
+    console.log('leeeng if', results.length);
+    if(results.length === 0) {
+      return (
+        <div className='not-found'>
+          <p>Not found</p>
+        </div>
+      )
+    } else {
+      return (
+        <div className='not-found'>
+          <p>Teste</p>
+        </div>
+      )
+    }
+  }
 
   function handleChange({ target }) {
     setSearch(target.value);
@@ -16,7 +35,8 @@ export default function Musics () {
 
   async function handleClick () {
     const results = await searchAlbumsAPI(search);
-    setAlbumList(results);
+      setAlbumList(results);
+      checkAlbum(results);
   };
 
   function albumMusics (album) {
@@ -45,7 +65,8 @@ export default function Musics () {
                   </button>
                 )
               })
-              : ''
+              :
+              ''
             }
           </div>
         </div>

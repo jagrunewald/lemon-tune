@@ -5,7 +5,7 @@
   height: 100vh;
 }
 
-.favorites-all {
+.favorites .favorites-all {
   margin: auto;
   margin-top: 200px;
   margin-bottom: 100px;
@@ -15,7 +15,7 @@
   width: 80%;
 }
 
-.favorites-list {
+.favorites .favorites-all .favorites-list {
   display: flex;
   border-radius: 1%;
   padding: 10px;
@@ -25,23 +25,25 @@
   text-overflow: ellipsis;
 }
 
-.favorites-list p {
+.favorites .favorites-all .favorites-list p {
   width: 40%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 @media screen and (max-width: 600px) {
-  .favorites-list {
+  .favorites .favorites-all {
+    margin-top: 150px;
+    width: 95%;
+  }
+
+  .favorites .favorites-all .favorites-list {
     font-size: 15px;
   }
-  .favorites-list audio {
+
+  .favorites .favorites-all .favorites-list audio {
     height: 50px;
     width: 50%;
   }
 
-  .favorites-all {
-    margin-top: 150px;
-    width: 95%;
-  }
 }

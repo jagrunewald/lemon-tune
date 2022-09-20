@@ -24,14 +24,14 @@
   margin-right: 5px;
 }
 
-.nav-name {
+.nav .nav-name {
   width: 50%;
   height: 30px;
-  margin-top: 0px;
+  margin-top: 15px;
   color: rgb(247, 247, 247);
 }
 
-.nav-search {
+.nav .nav-search {
   display: flex;
   text-decoration: none;
   color: rgb(247, 247, 247);
@@ -41,11 +41,12 @@
   border: none;
   background-color: rgb(255, 201, 6);
 }
-.nav-search:hover {
+
+.nav .nav-search:hover {
   font-weight: bolder;
 }
 
-.nav-favorites {
+.nav .nav-favorites {
   display: flex;
   text-decoration: none;
   color: rgb(247, 247, 247);
@@ -55,12 +56,13 @@
   border: none;
   background-color: rgb(255, 201, 6);
 }
-.nav-favorites:hover {
+
+.nav .nav-favorites:hover {
   cursor: pointer;
   font-weight: bolder;
 }
 
-.nav-logoff {
+.nav .nav-logoff {
   display: flex;
   text-decoration: none;
   color: rgb(247, 247, 247);
@@ -71,7 +73,8 @@
   border: none;
   background-color: rgb(255, 201, 6);
 }
-.nav-logoff:hover {
+
+.nav .nav-logoff:hover {
   cursor: pointer;
   font-weight: bolder;
 }
@@ -90,24 +93,24 @@
     margin-right: 5px;
   }
 
-  .nav-name {
+  .nav .nav-name {
     width: 40%;
     height: 20px;
     margin-top: 0px;
     font-size: 13px;
   }
 
-  .nav-search {
+  .nav .nav-search {
     width: 12%;
     font-size: 13px;
   }
 
-  .nav-favorites {
+  .nav .nav-favorites {
     width: 15%;
     font-size: 13px;
   }
 
-  .nav-logoff {
+  .nav .nav-logoff {
     width: 15%;
     font-size: 13px;
   }

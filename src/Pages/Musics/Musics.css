@@ -4,58 +4,62 @@
   color: rgb(44, 43, 43);
 }
 
-.musics-page {
+.musics .musics-page {
   display: flex;
 }
 
-.musics-container {
+.musics .musics-page .musics-container {
   margin-top: 120px;
   width: 100%;
 }
 
-.musics-info {
+.musics .musics-page .musics-container .musics-info {
   text-align: center;
   margin-bottom: 50px;
 }
-.musics-info img {
+
+.musics .musics-page .musics-container .musics-info img {
   border-radius: 4%;
 }
 
-.musics-all {
+.musics .musics-page .musics-container .musics-all {
   margin: auto;
   width: 60%;
   color: rgb(44, 43, 43);
 }
 
-.musics-list {
+.musics .musics-page .musics-container .musics-all .musics-list {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 
-.musics-list p {
+.musics .musics-page .musics-container .musics-all .musics-list p {
   width: 50%;
   margin-left: 25px;
 }
 
-.musics-list audio {
+.musics .musics-page .musics-container .musics-all .musics-list audio {
   width: 30%;
 }
 
-.musics-list input {
+.musics .musics-page .musics-container .musics-all .musics-list input {
   margin-right: 25px;
 }
 
 @media screen and (max-width: 600px) {
-  .musics-all {
+  .musics .musics-page .musics-container .musics-all {
     width: 95%;
   }
-  .musics-list p {
+
+  .musics .musics-page .musics-container .musics-all .musics-list p {
     width: 40%;
     margin-left: 10px;
     font-size: 10px;
   }
-  .musics-list audio {
+
+  .musics .musics-page .musics-container .musics-all .musics-list audio {
     width: 40%;
   }
+
 }
