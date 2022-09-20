@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/lemon-tune/static/css/main.e9e0d507.css",
-    "main.js": "/lemon-tune/static/js/main.337c76ad.js",
+    "main.css": "/lemon-tune/static/css/main.8bd31861.css",
+    "main.js": "/lemon-tune/static/js/main.91de1d0c.js",
     "static/media/lemon-icon.png": "/lemon-tune/static/media/lemon-icon.4b6459d3242311232894.png",
     "index.html": "/lemon-tune/index.html",
-    "main.e9e0d507.css.map": "/lemon-tune/static/css/main.e9e0d507.css.map",
-    "main.337c76ad.js.map": "/lemon-tune/static/js/main.337c76ad.js.map"
+    "main.8bd31861.css.map": "/lemon-tune/static/css/main.8bd31861.css.map",
+    "main.91de1d0c.js.map": "/lemon-tune/static/js/main.91de1d0c.js.map"
   },
   "entrypoints": [
-    "static/css/main.e9e0d507.css",
-    "static/js/main.337c76ad.js"
+    "static/css/main.8bd31861.css",
+    "static/js/main.91de1d0c.js"
   ]
 }
