@@ -9,34 +9,20 @@ export default function Musics () {
   const navigate = useNavigate();
   const [search, setSearch] = useState('');
   const [albumList, setAlbumList] = useState(null);
-  const [lengthAlbumList, setLengthAlbumList] = useState(-2);
-  console.log(lengthAlbumList);
-
-  function checkAlbum(results) {
-    console.log('leeeng if', results.length);
-    if(results.length === 0) {
-      return (
-        <div className='not-found'>
-          <p>Not found</p>
-        </div>
-      )
-    } else {
-      return (
-        <div className='not-found'>
-          <p>Teste</p>
-        </div>
-      )
-    }
-  }
+  const [notFound, setNotFound] = useState('');
 
   function handleChange({ target }) {
     setSearch(target.value);
   }
 
   async function handleClick () {
+    setNotFound('');
     const results = await searchAlbumsAPI(search);
-      setAlbumList(results);
-      checkAlbum(results);
+    if(results.length === 0) {
+      setNotFound('Álbum not found');
+    }
+
+    setAlbumList(results);
   };
 
   function albumMusics (album) {
@@ -51,6 +37,9 @@ export default function Musics () {
         <div className='albums-all'>
           <input type='text' className='input-search' value={search} onChange={ handleChange }></input>
           <button type='button' className='button-search' onClick={ handleClick }>Search</button>
+          <div className='not-found'>
+            <h3 className='msg-not-found'>{notFound}</h3>
+          </div>
           <div className='albums-all-response'>
             {
               albumList ?

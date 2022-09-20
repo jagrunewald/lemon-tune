@@ -16,7 +16,7 @@ export default function Login () {
 
   function validateLogin() {
     const regex = /.+@.+\.[A-Za-z]+$/;
-    const minLength = 5;
+    const minLength = 4;
 
     if (name !== '' && regex.test(email) && password.length >= minLength) {
       setButtonLogin(false);

@@ -84,10 +84,12 @@
     margin-top: 20px;
     margin-left: 10px;
   }
+
   .nav a {
     margin-top: 20px;
     margin-right: 5px;
-  }  
+  }
+  
   .nav button {
     margin-top: 20px;
     margin-right: 5px;
@@ -96,7 +98,7 @@
   .nav .nav-name {
     width: 40%;
     height: 20px;
-    margin-top: 0px;
+    margin-top: 20px;
     font-size: 13px;
   }
 
